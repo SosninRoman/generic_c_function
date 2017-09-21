@@ -1,13 +1,16 @@
 #ifdef T
 #include "template.h"
 
-int FIND(T) (T* base, int size, T val, int t)
+int FIND(T) (T* base, int size, T val)
 {
-	for(int i = 0; i < size; ++i)
+	int i = 0;
+	while(i < size)
+	{
 		if( *(base + i) == val)
 			return i;
+		++i;
+	}
 	return -1;
 }
 
 #endif
-//#endif
